@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background: #eee;
+    position: relative;
+    display: flex;
+    min-height: 3000px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 10000;
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    color: #00ffff;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header .logo span {
+    color: #ff0051;
+    transition: 0.6s;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li {
+    position: relative;
+    list-style: none;
+}
+header ul li a {
+    position: relative;
+    margin:  0 15px;
+    text-decoration: none;
+    color: #00ffff;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.6s;
+    text-transform: capitalize;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(light.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-image 0.6s;
+}
+.banner h2 {
+    color: #fff;
+    font-size: 90px;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1em;
+}
+.banner h2 .wel {
+    color: #00ffff;
+    transition: 0.6s;
+}
+.banner h2 .web {
+    color: #ff0051;
+    transition: 0.6s;
+}
+.toggle {
+    width: 35px;
+    height: 35px;
+    background: #e9f5ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 40px;
+}
+.toggle:before {
+    content: '\f186';
+    font-family: fontAwesome;
+    color: #2fa1ff;
+}
+/* Light Mode */
+
+/* light mode sticky */
+header.sticky {
+    padding: 5px 100px;
+    background: #fff;
+}
+header.sticky ul .toggle {
+    background: #e9f5ff;
+}
+header.sticky .toggle:before {
+    color: #2fa1ff;
+}
+header.sticky ul li a {
+    color: #ff0051;
+}
+/* Dark Mode */
+.container.dark .toggle:before {
+    content: '\f185';
+    color: #fff;
+}
+.container.dark {
+    background: #151414;
+}
+.container.dark .banner {
+    background-image: url(dark.jpg);
+}
+.container.dark .toggle {
+    background: #404852;
+}
+.container.dark header .logo {
+    color: #ff0051;
+}
+.container.dark header .logo span {
+    color: #00ffff;
+}
+.container.dark header ul li a {
+    color: #ff0051;
+}
+.container.dark .banner h2 .wel{
+    color: #ff0051;
+}
+.container.dark .banner h2 .web{
+    color: #00ffff;
+}
+/* dark mode sticky */
+.container.dark header.sticky {
+    background: #2a2828;
+}
+.container.dark header.sticky ul li a {
+    color: #00ffff;
+}
